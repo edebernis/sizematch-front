@@ -6,7 +6,7 @@
         <div class="item-content">
             <a v-bind:href="item.urls[0]" target="_blank"><h3>{{ item.name }}</h3></a>
             <p>{{ item.description }}</p>
-            <div class="price">{{ item.Price.amount }}€</div>
+            <div class="price">{{ item.price.amount }}€</div>
         </div>
     </div>
 </template>
@@ -26,7 +26,6 @@ export default {
     padding: 5px;
     height: 100px;
     margin-bottom: 30px;
-    display: inline-block;
 }
 .item-img {
     float: left;

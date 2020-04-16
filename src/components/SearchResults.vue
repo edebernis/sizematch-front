@@ -32,7 +32,7 @@ export default {
     methods: {
         async infiniteHandler($state) {
             try {
-                const newData = await this.$parent.continueSearch();
+                const newData = await this.$parent.search();
                 newData ? $state.loaded() : $state.complete();
             } catch (e) {
                 $state.error();
