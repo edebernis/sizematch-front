@@ -9,6 +9,8 @@
             v-bind:identifier="infiniteId"
             v-on:infinite="infiniteHandler">
                 <span slot="no-more"></span>
+                <template v-if="started" slot="no-results">No results :(</template>
+                <span v-else slot="no-results"></span>
         </infinite-loading>
     </div>
 </template>
@@ -19,6 +21,7 @@ import Item from './Item.vue'
 export default {
     data() {
         return {
+            started: false,
             infiniteId: +new Date(),
         };
     },
@@ -39,7 +42,8 @@ export default {
             }
         },
         reset() {
-            this.infiniteId += 1;
+            this.started = true;
+            this.infiniteId += 1
         }
     }
 };

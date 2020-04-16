@@ -1,7 +1,7 @@
 <template>
     <div class="item">
         <div class="item-img">
-            <img v-bind:src="item.image_urls[0]"/>
+            <carousel :data="images" :indicators="false" :autoplay=false :interval=10000000></carousel>
         </div>
         <div class="item-content">
             <div class="item-header">
@@ -31,19 +31,25 @@ export default {
     name: 'Item',
     props: {
         item: Object
+    },
+    computed: {
+        images: function() {
+            return this.item.image_urls.map((url) => {
+                return '<img src="'+url+'"/>';
+            });
+        }
     }
 };
 </script>
 
 <style>
 .item {
-    padding: 5px;
-    height: 100px;
+    height: 200px;
     margin-bottom: 30px;
 }
 .item-img {
     float: left;
-    width: 100px;
+    width: 200px;
     height: 100%;
     margin-right: 30px;
 }
