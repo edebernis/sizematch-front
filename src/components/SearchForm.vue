@@ -72,9 +72,6 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     padding: 10px;
 }
-#dimensions {
-
-}
 .dimension-group {
     display: inline-block;
     width: 25%;
@@ -82,9 +79,9 @@ export default {
 .dimension-group label {
     display: inline-block;
     width: 140px;
-    text-align: right;
     margin-bottom: 10px;
     margin-right: 10px;
+    text-align: right;
 }
 .dimension-group input {
     width: 80px;
@@ -92,8 +89,6 @@ export default {
     font-size: 15px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     padding: 5px;
-}
-.dimension-group input::placeholder {
     text-align: right;
 }
 </style>
