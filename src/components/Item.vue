@@ -11,7 +11,7 @@
                 <div class="item-price-logo">
                     <span v-if="item.price.currency == 'EUR'" class="price">{{ item.price.amount }}€</span>
                     <span v-else-if="item.price.currency == 'GBP'" class="price">{{ item.price.amount }}£</span>
-                    <img src='../assets/ikea-logo.png'/>
+                    <img v-if="item.source == 'ikea'" src='../assets/ikea-logo.png'/>
                 </div>
                 <ul class="item-dimensions">
                     <li v-if="item.dimensions.length">Longueur: {{ item.dimensions.length }} cm</li>
