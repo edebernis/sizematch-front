@@ -11,6 +11,7 @@
         v-bind:results="results"
         ref="resultsComponent"
     ></SearchResults>
+    <footer>SizeMatch - {{ new Date().getFullYear() }}</footer>
   </div>
 </template>
 
@@ -84,6 +85,13 @@ export default {
 </script>
 
 <style>
+* {
+    margin:0;
+    padding:0;
+}
+body, html {
+    height: 98%;
+}
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -92,11 +100,22 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
+    min-height: 100%;
+    max-width: 1280px;
+    margin:0 auto;
+    position:relative;
 }
 #logo {
     float: left;
     margin-left: 20px;
     margin-bottom: 0;
     margin-right: 20px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
 }
 </style>

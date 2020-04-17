@@ -9,7 +9,7 @@
             v-bind:identifier="infiniteId"
             v-on:infinite="infiniteHandler">
                 <span slot="no-more"></span>
-                <template v-if="started" slot="no-results">No results :(</template>
+                <template v-if="started" slot="no-results">Aucun r&eacute;sultat :(</template>
                 <span v-else slot="no-results"></span>
         </infinite-loading>
     </div>
