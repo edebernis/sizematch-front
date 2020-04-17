@@ -79,8 +79,8 @@ export default {
             if (this.$refs.formComponent.maxWeight)     query.max_weight     = this.$refs.formComponent.maxWeight;
 
             return query;
-        }
-    }
+        },
+    },
 }
 </script>
 
@@ -111,7 +111,7 @@ body, html {
     margin-bottom: 0;
     margin-right: 20px;
 }
-footer{
+footer {
     position: absolute;
     bottom: 0;
     width: 100%;

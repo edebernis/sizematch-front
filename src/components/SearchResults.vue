@@ -44,8 +44,8 @@ export default {
         reset() {
             this.started = true;
             this.infiniteId += 1
-        }
-    }
+        },
+    },
 };
 </script>
 

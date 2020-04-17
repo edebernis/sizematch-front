@@ -114,8 +114,8 @@ export default {
         },
         advancedSearch() {
             this.advancedSearchHeight = this.advancedSearchHeight ? 0 : 100;
-        }
-    }
+        },
+    },
 };
 </script>
 
