@@ -95,7 +95,8 @@ export default {
 }
 #logo {
     float: left;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-bottom: 0;
+    margin-right: 20px;
 }
 </style>

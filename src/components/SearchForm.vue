@@ -129,14 +129,14 @@ export default {
 #search-input {
     margin-bottom: 20px;
     height: 50px;
+    margin-left: 15%;
 }
 #search-input input {
-    width: 65%;
+    width: 75%;
     height: 25px;
     font-size: 25px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     padding: 10px;
-    margin-left: 15%;
 }
 #search-menu {
     float: right;

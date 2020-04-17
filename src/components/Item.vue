@@ -1,23 +1,27 @@
 <template>
     <div class="item">
-        <div class="item-img">
+        <div class="item-images">
             <carousel :data="images" :indicators="false" :autoplay=false :interval=10000000></carousel>
         </div>
-        <div class="item-content">
+        <div class="item-body">
             <div class="item-header">
                 <a v-bind:href="item.urls[0]" target="_blank"><h3>{{ item.name }}</h3></a>
             </div>
-            <div class="item-body">
-                <span class="price">{{ item.price.amount }}€</span>
+            <div class="item-content">
+                <div class="item-price-logo">
+                    <span v-if="item.price.currency == 'EUR'" class="price">{{ item.price.amount }}€</span>
+                    <span v-else-if="item.price.currency == 'GBP'" class="price">{{ item.price.amount }}£</span>
+                    <img src='../assets/ikea-logo.png'/>
+                </div>
                 <ul class="item-dimensions">
                     <li v-if="item.dimensions.length">Longueur: {{ item.dimensions.length }} cm</li>
-                    <li v-else>Longueur: N/A</li>
                     <li v-if="item.dimensions.width">Largeur: {{ item.dimensions.width }} cm</li>
-                    <li v-else>Largeur: N/A</li>
                     <li v-if="item.dimensions.height">Hauteur: {{ item.dimensions.height }} cm</li>
-                    <li v-else>Hauteur: N/A</li>
                     <li v-if="item.dimensions.depth">Profondeur: {{ item.dimensions.depth }} cm</li>
-                    <li v-else>Profondeur: N/A</li>
+                    <li v-if="item.dimensions.diameter">Diam&egrave;tre: {{ item.dimensions.diameter }} cm</li>
+                    <li v-if="item.dimensions.thickness">Epaisseur: {{ item.dimensions.thickness }} cm</li>
+                    <li v-if="item.dimensions.volume">Volume: {{ item.dimensions.volume }} litres</li>
+                    <li v-if="item.dimensions.weight">Poids: {{ item.dimensions.weight }} kg</li>
                 </ul>
                 <p class="item-description">{{ item.description }}</p>
             </div>
@@ -30,15 +34,15 @@
 export default {
     name: 'Item',
     props: {
-        item: Object
+        item: Object,
     },
     computed: {
         images: function() {
             return this.item.image_urls.map((url) => {
                 return '<img src="'+url+'"/>';
             });
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -47,19 +51,19 @@ export default {
     height: 200px;
     margin-bottom: 30px;
 }
-.item-img {
+.item-images {
     float: left;
     width: 200px;
     height: 100%;
     margin-right: 30px;
 }
-.item-img img {
+.item-images img {
     width: 100%;
     height: 100%;
 }
-.item-content {
+.item-body {
     height: 100%;
-    margin-left: 115px;
+    margin-left: 230px;
 }
 .item-header {
     height: 25px;
@@ -73,13 +77,13 @@ export default {
     margin: 0;
     height: 100%;
 }
-.item-body {
-    height: 75px;
+.item-content {
+    height: 175px;
 }
 .item-description {
     margin: 0;
     text-align: justify;
-    font-size: 11px;
+    font-size: 12px;
     width: 85%;
     height: 50px;
 }
@@ -88,6 +92,7 @@ export default {
     padding: 0;
     margin-bottom: 10px;
     height: 25px;
+    width: 85%;
 }
 .item-dimensions li {
     font-size: 13px;
@@ -95,10 +100,15 @@ export default {
     display: inline-block;
     margin-right: 15px;
 }
-.price {
+.item-price-logo {
     float: right;
-    height: 75px;
-    line-height: 75px;
+    height: 175px;
+    width: 10%;
     font-size: 25px;
+    text-align: right;
+}
+.item-price-logo img {
+    width: 100%;
+    margin-top: 10px;
 }
 </style>
