@@ -60,16 +60,24 @@ export default {
                 a: this.after,
                 lang: this.lang,
             }
-            if (this.$refs.formComponent.minLength) query.min_length = this.$refs.formComponent.minLength;
-            if (this.$refs.formComponent.maxLength) query.max_length = this.$refs.formComponent.maxLength;
-            if (this.$refs.formComponent.minWidth)  query.min_width  = this.$refs.formComponent.minWidth;
-            if (this.$refs.formComponent.maxWidth)  query.max_width  = this.$refs.formComponent.maxWidth;
-            if (this.$refs.formComponent.minHeight) query.min_height = this.$refs.formComponent.minHeight;
-            if (this.$refs.formComponent.maxHeight) query.max_height = this.$refs.formComponent.maxHeight;
-            if (this.$refs.formComponent.minDepth)  query.min_depth  = this.$refs.formComponent.minDepth;
-            if (this.$refs.formComponent.maxDepth)  query.max_depth  = this.$refs.formComponent.maxDepth;
+            if (this.$refs.formComponent.minLength)     query.min_length     = this.$refs.formComponent.minLength;
+            if (this.$refs.formComponent.maxLength)     query.max_length     = this.$refs.formComponent.maxLength;
+            if (this.$refs.formComponent.minWidth)      query.min_width      = this.$refs.formComponent.minWidth;
+            if (this.$refs.formComponent.maxWidth)      query.max_width      = this.$refs.formComponent.maxWidth;
+            if (this.$refs.formComponent.minHeight)     query.min_height     = this.$refs.formComponent.minHeight;
+            if (this.$refs.formComponent.maxHeight)     query.max_height     = this.$refs.formComponent.maxHeight;
+            if (this.$refs.formComponent.minDepth)      query.min_depth      = this.$refs.formComponent.minDepth;
+            if (this.$refs.formComponent.maxDepth)      query.max_depth      = this.$refs.formComponent.maxDepth;
+            if (this.$refs.formComponent.minDiameter)   query.min_diameter   = this.$refs.formComponent.minDiameter;
+            if (this.$refs.formComponent.maxDiameter)   query.max_diameter   = this.$refs.formComponent.maxDiameter;
+            if (this.$refs.formComponent.minThickness)  query.min_thickness  = this.$refs.formComponent.minThickness;
+            if (this.$refs.formComponent.maxThickness)  query.max_thickness  = this.$refs.formComponent.maxThickness;
+            if (this.$refs.formComponent.minVolume)     query.min_volume     = this.$refs.formComponent.minVolume;
+            if (this.$refs.formComponent.maxVolume)     query.max_volume     = this.$refs.formComponent.maxVolume;
+            if (this.$refs.formComponent.minWeight)     query.min_weight     = this.$refs.formComponent.minWeight;
+            if (this.$refs.formComponent.maxWeight)     query.max_weight     = this.$refs.formComponent.maxWeight;
 
-            return query
+            return query;
         }
     }
 }
