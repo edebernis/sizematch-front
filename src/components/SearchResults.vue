@@ -11,6 +11,9 @@
                 <span slot="no-more"></span>
                 <template v-if="started" slot="no-results">Aucun r&eacute;sultat :(</template>
                 <span v-else slot="no-results"></span>
+                <div slot="error" slot-scope="{ trigger }">
+                    Erreur, cliquez <a href="javascript:;" @click="trigger">ici</a> pour r&eacute;essayer
+                </div>
         </infinite-loading>
     </div>
 </template>

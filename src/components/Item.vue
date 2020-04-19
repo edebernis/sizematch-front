@@ -9,8 +9,8 @@
             </div>
             <div class="item-content">
                 <div class="item-price-logo">
-                    <span v-if="item.price.currency == 'EUR'" class="price">{{ item.price.amount }}€</span>
-                    <span v-else-if="item.price.currency == 'GBP'" class="price">{{ item.price.amount }}£</span>
+                    <span v-if="item.price.currency == 'EUR'" class="price">{{ item.price.amount.toLocaleString() }}€</span>
+                    <span v-else-if="item.price.currency == 'GBP'" class="price">{{ item.price.amount.toLocaleString() }}£</span>
                     <img v-if="item.source == 'ikea'" src='../assets/ikea-logo.png'/>
                 </div>
                 <ul class="item-dimensions">

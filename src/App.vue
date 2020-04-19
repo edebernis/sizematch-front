@@ -20,7 +20,7 @@ import SearchForm from './components/SearchForm.vue'
 import SearchResults from './components/SearchResults.vue'
 
 import axios from 'axios';
-const api = 'http://localhost:9000/v1/items';
+const api = process.env.VUE_APP_SIZEMATCH_API_URL + '/items';
 
 export default {
     data() {
