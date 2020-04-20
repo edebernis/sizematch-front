@@ -14,14 +14,14 @@
                     <img v-if="item.source == 'ikea'" src='../assets/ikea-logo.png'/>
                 </div>
                 <ul class="item-dimensions">
-                    <li v-if="item.dimensions.length">Longueur: {{ item.dimensions.length }} cm</li>
-                    <li v-if="item.dimensions.width">Largeur: {{ item.dimensions.width }} cm</li>
-                    <li v-if="item.dimensions.height">Hauteur: {{ item.dimensions.height }} cm</li>
-                    <li v-if="item.dimensions.depth">Profondeur: {{ item.dimensions.depth }} cm</li>
-                    <li v-if="item.dimensions.diameter">Diam&egrave;tre: {{ item.dimensions.diameter }} cm</li>
-                    <li v-if="item.dimensions.thickness">Epaisseur: {{ item.dimensions.thickness }} cm</li>
-                    <li v-if="item.dimensions.volume">Volume: {{ item.dimensions.volume }} litres</li>
-                    <li v-if="item.dimensions.weight">Poids: {{ item.dimensions.weight }} kg</li>
+                    <li v-if="item.dimensions.length">Longueur: {{ item.dimensions.length.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.width">Largeur: {{ item.dimensions.width.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.height">Hauteur: {{ item.dimensions.height.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.depth">Profondeur: {{ item.dimensions.depth.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.diameter">Diam&egrave;tre: {{ item.dimensions.diameter.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.thickness">Epaisseur: {{ item.dimensions.thickness.toLocaleString() }} cm</li>
+                    <li v-if="item.dimensions.volume">Volume: {{ item.dimensions.volume.toLocaleString() }} litres</li>
+                    <li v-if="item.dimensions.weight">Poids: {{ item.dimensions.weight.toLocaleString() }} kg</li>
                 </ul>
                 <p class="item-description">{{ item.description }}</p>
             </div>
